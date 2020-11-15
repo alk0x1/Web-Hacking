@@ -74,7 +74,8 @@ https://site.com/api/v1/users/your?id=UAEILsdUf50&victim?id=BAEILsaqQhk → bypa
 https://site.com/api/v1/users/redactid/email → bypass ok
 
 Payload for basic test:
-
+<ul>
+ <b>
 ? <br/>
 ?? <br/>
 & <br/>
@@ -101,7 +102,8 @@ Payload for basic test:
 %26 <br/>
 %23 <br/>
 .json <br/>
-
+ </b>
+</ul>
 HTTP Header based bypass:
 
 1. X-Original-URL: /redact
