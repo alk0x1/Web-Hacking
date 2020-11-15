@@ -1,8 +1,4 @@
-# Web-Hacking #
-## Topics 
-
-#### Tricks
-<b>If you want do bypass endpoint always try to use own methodology.</b>
+<h3>If you want do bypass endpoint always try to use own methodology.<h3>
 
 <b>Example</b>:
 
