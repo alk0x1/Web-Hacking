@@ -2,7 +2,7 @@
 ## Topics 
 
 #### Tricks
-If you want do bypass endpoint always try to use own methodology.
+<b>If you want do bypass endpoint always try to use own methodology.</b>
 
 Example:
 
@@ -10,8 +10,8 @@ Http Header based bypass:
 
 1. X-Original-URL: /redact
 
-Example:
-  ↓
+Example:<br/>
+ 
   
 GET /api/getUser HTTP/1.1 → 403
 Host: redact.com
@@ -22,13 +22,13 @@ X-Original-URL: /api/getUser → 200 OK
 
 2. Referer: https://site.com/api/redact
 
-Example:
-  ↓
+Example:<br/>
+  
 
 GET /api/getUser HTTP/1.1 → acess denied
 Host: redact.com
 
-  ↓
+  
   
 GET / HTTP/1.1
 Host: redact.com
