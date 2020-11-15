@@ -78,7 +78,7 @@ Payload for basic test:
 ? <br/>
 ?? <br/>
 & <br/>
-# <br/>
+'#' <br/>
 % <br/>
 %20 <br/>
 %09 <br/>
