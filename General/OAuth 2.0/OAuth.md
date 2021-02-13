@@ -1,4 +1,4 @@
-<img src="./imgs/oauth.jpg" />
+<img src="./imgs/oauth.jpg" width="600px"/>
 
 <h2>What is OAuth?</h2>
 
