@@ -1,7 +1,8 @@
-<img src="../imgs/oauth.jpg" />
+<img src="./imgs/oauth.jpg" />
 
 <h2>What is OAuth?</h2>
 
+<<<<<<< HEAD
 <p>OAuth is a commonly used authorization framework that enables websites and web applications to request limited access to user's
 account on another application. Crucially, OAuth allows the user to grant this access without exposing their login credentials to the
 requesting application. This means users can fine-tune which data they want to share rather than having to hand over full control of
@@ -37,3 +38,14 @@ Once you know the hostname of the authorization server, you should always try se
 <li>/.well-known/openid-configuration</li><br/>
 
 These will often return a JSON configuration file containing key information, such as details of additional features that may be supported. This will sometimes tip you off about a wider attack surface and supported features that may not be mentioned in the documentation.
+=======
+<p>
+  OAuth is a commonly used authorization framework that enables websites and web applications to request limited access to user's
+  account on another application. Crucially, OAuth allows the user to grant this access without exposing their login credentials to the
+  requesting application. This means users can fine-tune which data they want to share rather than having to hand over full control of
+  their account to a third party
+</p>
+<p>
+  The basic OAuth process is widely used to integrate third-party functionality that requires access to certain data from a user's account. For example, an application might use     OAuth to request access to your email contacts list so that it can suggest people to connect with. However, the same mechanism is also used to provide third-party authentication   services, allowing users to log in with an account that they have with a different website.
+</p>
+>>>>>>> 5b4c859403b470e58ca6c5906b03edb6934b9e1d
