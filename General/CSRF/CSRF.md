@@ -1,3 +1,5 @@
+<img src="https://periciacomputacional.com/wp-content/uploads/2018/10/csrf-banner-1280x640.png"/>  
+
 # Como ocorre
 O ataque funciona através da inclusão de um link ou script numa página que acede a um site no qual se sabe (ou se supõe) que o utilizador tenha sido autenticado.[5] Por exemplo, um usuário, Bob, pode estar a navegar num fórum de bate-papo onde outro usuário, Fred, postou uma mensagem. Suponha-se que Fred tenha criado um elemento da imagem HTML que faz referência a uma ação no site do banco de Bob (em vez de um arquivo de imagem), por exemplo,
 
@@ -17,6 +19,8 @@ Ataques CSRF em tags de imagem muitas vezes são feitas a partir de fóruns na I
 
 
 https://www.treinaweb.com.br/blog/cross-site-request-forgery-csrf-e-abordagens-para-mitiga-lo/
+
+<img src="https://www.infosec.com.br/wp-content/uploads/2017/07/cross-site-request-forgery.png" width="750"/>  
 
 # Limitações
 Várias coisas têm que acontecer para que um cross-site request forgery tenha sucesso:
